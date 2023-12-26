@@ -8,7 +8,7 @@ ENV STEAM_TFASEED=
 
 COPY entrypoint.sh /entrypoint.sh
 
-RUN chmod +x /entrypoint.sh && wget https://github.com/Weilbyte/steamcmd-2fa/releases/latest/download/steamcmd-2fa -O /home/steam/steamcmd-2fa && chmod +x /home/steam/steamcmd-2fa
+RUN chmod +x /entrypoint.sh && wget https://github.com/KlimeSE/klime-steamcmd-2fa/releases/latest/download/steamcmd-2fa -O /home/steam/steamcmd-2fa && chmod +x /home/steam/steamcmd-2fa
 
 CMD ["."]
 ENTRYPOINT ["/entrypoint.sh"]
