@@ -33,6 +33,7 @@ else
   if [[ $? -ne 0 ]]; then
     exit 1 
   fi
+  echo "2FA Code: $code"  # This line is added to print the code
   /home/steam/steamcmd/steamcmd.sh +@ShutdownOnFailedCommand 1 +login ${STEAM_USERNAME} ${STEAM_PASSWORD} $code +workshop_build_item /home/steam/workshop.vdf +quit
 fi
 
